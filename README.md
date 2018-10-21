@@ -1,2 +1,2 @@
 "# kodilla-testing" 
-# karol-wilczynski-kodilla-java1
+# karol-wilczynski-kodilla-java
