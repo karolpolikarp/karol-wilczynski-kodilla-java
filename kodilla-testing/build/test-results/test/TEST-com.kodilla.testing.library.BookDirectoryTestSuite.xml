@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.library.BookDirectoryTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-11-11T12:28:16" hostname="MacBook-Pro-Karol-2.local" time="0.325">
+  <properties/>
+  <testcase name="testListBooksWithConditionFragmentShorterThan3" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.318"/>
+  <testcase name="testListBooksWithConditionMoreThan20" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.004"/>
+  <testcase name="testListBooksWithConditionsReturnList" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.001"/>
+  <testcase name="testListBooksInHandsOfCase0" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.001"/>
+  <testcase name="testListBooksInHandsOfCase1" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.0"/>
+  <testcase name="testListBooksInHandsOfCase5" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.0"/>
+  <system-out><![CDATA[Launching tests.
+Test #1
+Test #2
+Test #3
+Test #4
+Test #5
+Test #6
+All tests finished.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
