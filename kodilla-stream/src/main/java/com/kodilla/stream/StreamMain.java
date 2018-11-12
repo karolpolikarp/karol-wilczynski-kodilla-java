@@ -49,7 +49,23 @@ public class StreamMain {
                 .filter(forumUser -> forumUser.getUserSex()=='M')
                 .filter(forumUser -> forumUser.getUserDateOfBirth().isBefore(LocalDate.now().minusYears(20)))
                 .filter(forumUser -> forumUser.getUserPostCount() >= 1)
+                .filter(forumUser -> {
+                    System.out.println(forumUser.getUserName());
+                    char sign = forumUser.getUserName().charAt(4);
+                    boolean result = false;
+                    if((sign >= 'a' && sign <= 'z')|| (sign >= 'A' && sign <= 'Z')){
+                        result = true;
+                    }
+                    return result;
+                })
                 .collect(Collectors.toMap(ForumUser::getUserId, forumUser -> forumUser));
+
+        double avg = forum.getUserList().stream()
+                .map(fu -> fu.getUserName())
+                .map(s -> s.length())
+                .mapToInt(n -> n)
+                .average().getAsDouble();
+        System.out.println(avg);
 
         mapOfForumUsers.entrySet().stream()
                 .map(entry -> "UserId: " + entry.getKey() + ": UserData: " + entry.getValue())
