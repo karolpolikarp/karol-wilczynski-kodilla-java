@@ -100,4 +100,5 @@ public class ForumUserTestSuite {
         Assert.assertTrue(user1.getLocationsOfFriendsOfFriends().contains("Miami"));
         Assert.assertFalse(user1.getLocationsOfFriendsOfFriends().contains("Orlando"));
     }
+
 }
