@@ -50,7 +50,7 @@ public class WorldTestSuite {
         BigDecimal totalPeopleQuantity = world.getPeopleQuantity();
 
         //Then
-        BigDecimal totalPeople = new BigDecimal(307000000);
-        Assert.assertEquals(totalPeople, totalPeopleQuantity);
+        BigDecimal totalPopulation = new BigDecimal(307000000);
+        Assert.assertEquals(totalPopulation, totalPeopleQuantity);
     }
 }
