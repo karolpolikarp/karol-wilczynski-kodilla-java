@@ -159,6 +159,5 @@ public class BoardTestSuite {
         //Then
         System.out.println("Approximatel,y task stays in progress " + avgDaysInProgress +" days.");
         Assert.assertEquals(10, avgDaysInProgress, 0.0001);
-
     }
 }
