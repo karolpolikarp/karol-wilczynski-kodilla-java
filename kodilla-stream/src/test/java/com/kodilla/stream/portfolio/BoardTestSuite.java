@@ -141,7 +141,7 @@ public class BoardTestSuite {
 
         //When
         List<TaskList> tasksInProgress = new ArrayList<>();
-        tasksInProgress.add(new TaskList("In progress"));
+        tasksInProgress.add(new TaskList("In Progress"));
 
         long taskQty = project.getTaskLists().stream()
                 .filter(tasksInProgress::contains)
