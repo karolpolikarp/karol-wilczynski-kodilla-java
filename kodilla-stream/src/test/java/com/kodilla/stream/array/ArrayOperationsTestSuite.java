@@ -31,6 +31,7 @@ public class ArrayOperationsTestSuite implements ArrayOperations{
         for(int n=0; n<10; n++) {
             numbersSum = numbersSum + numbers[n];
         }
+
         double expected = (double)numbersSum / 10;
 
         //Then
