@@ -9,7 +9,7 @@ public class ExceptionHandling {
         } catch (Exception e) {
             System.out.println("Wrong input! " + e);
         } finally {
-            System.out.println("I am gonna be here... always!");
+            System.out.println("x >= 2 or x < 1 or y == 1.5");
         }
     }
 }
