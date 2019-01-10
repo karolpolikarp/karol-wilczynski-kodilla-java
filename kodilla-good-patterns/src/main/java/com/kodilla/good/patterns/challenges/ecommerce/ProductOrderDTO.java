@@ -28,7 +28,7 @@ public class ProductOrderDTO {
         return product;
     }
 
-    public boolean isSold() {
+    public boolean isOrdered() {
         return isOrdered;
     }
 }

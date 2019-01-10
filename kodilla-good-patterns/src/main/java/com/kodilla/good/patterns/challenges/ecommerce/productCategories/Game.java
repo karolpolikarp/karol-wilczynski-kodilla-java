@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.challenges.ecommerce.itemCategories;
+package com.kodilla.good.patterns.challenges.ecommerce.productCategories;
 
 import com.kodilla.good.patterns.challenges.ecommerce.Product;
 

@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.challenges.ecommerce;
 
-import com.kodilla.good.patterns.challenges.ecommerce.itemCategories.*;
+import com.kodilla.good.patterns.challenges.ecommerce.productCategories.*;
 
 import java.time.LocalDateTime;
 
