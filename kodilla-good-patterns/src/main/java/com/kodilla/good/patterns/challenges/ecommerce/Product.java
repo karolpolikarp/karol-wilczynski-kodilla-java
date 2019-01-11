@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.challenges.ecommerce;
 
-public class Product { ///abstract?
+public class Product { ///abstract czy interface?
 
     private String productName;
     private double productPrice;
