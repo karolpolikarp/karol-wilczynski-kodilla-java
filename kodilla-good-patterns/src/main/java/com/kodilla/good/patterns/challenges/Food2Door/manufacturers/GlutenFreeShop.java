@@ -24,6 +24,7 @@ public class GlutenFreeShop implements Manufacturer{
 
     @Override
     public boolean process(User user, Map<Product, Integer> order) {
+        System.out.println("GlutenFreeShop here, thanks for your order! BTW this message is also gluten free.");
         return true;
     }
 }

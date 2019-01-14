@@ -24,6 +24,7 @@ public class ExtraFoodShop implements Manufacturer {
 
     @Override
     public boolean process(User user, Map<Product, Integer> order) {
+        System.out.println("Dear Sir, we are pleased to process your order. Feel free to use this 10% coupon next time - D1SC0UNT - !");
         return true;
     }
 }

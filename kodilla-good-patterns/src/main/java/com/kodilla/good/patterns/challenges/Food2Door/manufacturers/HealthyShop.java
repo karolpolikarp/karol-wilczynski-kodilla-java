@@ -24,6 +24,7 @@ public class HealthyShop implements Manufacturer{
 
     @Override
     public boolean process(User user, Map<Product, Integer> order) {
+        System.out.println("Hello, thank you for ordering at HealthyShop, hope you have a *wink* healthy *wink* day!");
         return true;
     }
 }
