@@ -140,24 +140,18 @@ public class BoardTestSuite {
         Board project = prepareTestData();
 
         //When
-        List<TaskList> tasksInProgress = new ArrayList<>();
-        tasksInProgress.add(new TaskList("In Progress"));
-
-        long taskQty = project.getTaskLists().stream()
-                .filter(tasksInProgress::contains)
-                .flatMap(tl->tl.getTasks().stream())
-                .count();
-
-        long daysInProgress = project.getTaskLists().stream()
-                .filter(tasksInProgress::contains)
-                .flatMap(tl->tl.getTasks().stream())
-                .mapToLong(d-> DAYS.between(d.getCreated(), LocalDate.now()))
-                .sum();
-
-        long avgDaysInProgress = daysInProgress/taskQty;
+        List<TaskList> inProgressTask = new ArrayList<>();
+        inProgressTask.add(new TaskList("In progress"));
+        double average = project.getTaskLists().stream()
+                .filter(inProgressTask::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .map(Task::getCreated)
+                .map(t -> LocalDate.now().toEpochDay() - t.toEpochDay())
+                .mapToInt(Long::intValue)
+                .average()
+                .getAsDouble();
 
         //Then
-        System.out.println("Approximatel,y task stays in progress " + avgDaysInProgress +" days.");
-        Assert.assertEquals(10, avgDaysInProgress, 0.0001);
+        Assert.assertEquals(10,average,0);
     }
 }
