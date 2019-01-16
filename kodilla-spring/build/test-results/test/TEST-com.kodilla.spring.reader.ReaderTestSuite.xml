@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.spring.reader.ReaderTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-01-16T14:11:17" hostname="Komputer" time="0.069">
+  <properties/>
+  <testcase name="testRead" classname="com.kodilla.spring.reader.ReaderTestSuite" time="0.033"/>
+  <testcase name="testConditional" classname="com.kodilla.spring.reader.ReaderTestSuite" time="0.035"/>
+  <system-out><![CDATA[2019-01-16 15:11:17.582  INFO 8692 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@69e577ad: startup date [Wed Jan 16 15:11:17 CET 2019]; root of context hierarchy
+Reading: The book number one
+2019-01-16 15:11:17.618  INFO 8692 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@50e80a64: startup date [Wed Jan 16 15:11:17 CET 2019]; root of context hierarchy
+Bean book2 was found in the container: false
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
