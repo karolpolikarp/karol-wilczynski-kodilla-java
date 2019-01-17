@@ -16,7 +16,7 @@ class Flight {
         return departureAirport;
     }
 
-    public  String getArrivalAirport() {
+    public String getArrivalAirport() {
         return arrivalAirport;
     }
 
