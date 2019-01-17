@@ -19,19 +19,32 @@ public final class FlightSearch {
 //                .collect(Collectors.toList());
 //        return flightsTo;
 //    }
-    public void getFlightsFrom(String from) {
+    public List<Flight> getFlightsFrom(String from) {
         List<Flight> flightsFrom = FlightDb.getFlightDb().stream()
                 .filter(flight -> flight.getDepartureAirport().equals(from))
 //                .map(flight -> flight.getArrivalAirport())
                 .collect(Collectors.toList());
-//        return flightsFrom;
+        return flightsFrom;
     }
 
-    public void getFlightsTo(String to) {
+    public List<Flight> getFlightsTo(String to) {
         List<Flight> flightsTo = FlightDb.getFlightDb().stream()
                 .filter(flight -> flight.getArrivalAirport().equals(to))
 //                .map(flight -> flight.getDepartureAirport())
                 .collect(Collectors.toList());
-//        return flightsTo;
+        return flightsTo;
+    }
+
+    public List<Flight> getInterconnectingFlights (String from, String via, String to ) {
+        List<Flight> flightsFrom = FlightDb.getFlightDb().stream()
+                .filter(flight -> flight.getDepartureAirport().equals(from))
+                .filter(flight -> flight.getArrivalAirport().equals(via))
+                .collect(Collectors.toList());
+        List<Flight> flightsTo = FlightDb.getFlightDb().stream()
+                .filter(flight -> flight.getArrivalAirport().equals(to))
+                .filter(flight -> flight.getDepartureAirport().equals(via))
+                .collect(Collectors.toList());
+        flightsFrom.addAll(flightsTo);
+        return flightsFrom;
     }
 }

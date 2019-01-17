@@ -28,8 +28,14 @@ public class Calculator {
     }
 
     public double div(double a, double b) {
-        double val = a / b;
-        display.displayValue(val);
+        double val;
+        if (b==0) {
+            val = 0;
+            System.out.println("Error!");
+        } else {
+            val = a / b;
+            display.displayValue(val);
+        }
         return val;
     }
 }
