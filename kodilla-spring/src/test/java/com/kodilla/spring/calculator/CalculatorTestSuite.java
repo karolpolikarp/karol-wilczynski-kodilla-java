@@ -17,14 +17,6 @@ public class CalculatorTestSuite {
     @Test
     public void testCalculations() {
         //Given
-//        String a = "abc";
-//        String b = "abc";
-//        System.out.println(a==b);
-//        b = b.substring(0,2);
-//        System.out.println(b);
-//        System.out.println(a==b);
-//        b = new String("abc");
-//        System.out.println(a==b);
         //When
         double addResult = calculator.add(5, 10);
         double subResult = calculator.sub(7, 2);

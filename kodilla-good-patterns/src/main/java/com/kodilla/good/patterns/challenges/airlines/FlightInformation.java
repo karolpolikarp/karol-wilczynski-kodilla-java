@@ -17,7 +17,7 @@ public class FlightInformation {
     public void printFlightsTo(String to) {
         List<Flight> s = flightSearch.getFlightsTo(to);
         System.out.println(message);
-//        System.out.println("To " + to + " you can book a flight from " + s + "!");
+//        System.out.println("To " + to + " you can book a flight from " + "!");
         System.out.println(s);
     }
     public void printFlightsVia(String from, String via, String to) {
