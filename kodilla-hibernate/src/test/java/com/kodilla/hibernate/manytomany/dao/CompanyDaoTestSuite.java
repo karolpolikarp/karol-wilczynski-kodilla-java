@@ -9,11 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.transaction.Transactional;
+import java.util.List;
+
+@Transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CompanyDaoTestSuite {
     @Autowired
     CompanyDao companyDao;
+    @Autowired
+    EmployeeDao employeeDao;
 
     @Test
     public void testSaveManyToMany(){
@@ -59,5 +65,37 @@ public class CompanyDaoTestSuite {
         //} catch (Exception e) {
         //    //do nothing
         //}
+    }
+
+    @Test
+    public void testFindEmployeeByLastName() {
+        //Given
+        Employee johnSmith = new Employee("John", "Smith");
+        employeeDao.save(johnSmith);
+
+        //When
+        List<Employee> lastName = employeeDao.findEmployeeByLastName("Smith");
+
+        //Then
+        Assert.assertEquals("Smith", lastName.get(0).getLastname());
+
+        //CleanUp
+        //@Transactional
+    }
+
+    @Test
+    public void findCompanyByFirstLettersOfName() {
+        //Given
+        Company softwareMachine = new Company("Software Machine");
+        companyDao.save(softwareMachine);
+
+        //When
+        List<Company> companyName = companyDao.findCompanyByFirstLettersOfName("Sof");
+
+        //Then
+        Assert.assertEquals("Software Machine", companyName.get(0).getName());
+
+        //CleanUp
+        //@Transactional
     }
 }
