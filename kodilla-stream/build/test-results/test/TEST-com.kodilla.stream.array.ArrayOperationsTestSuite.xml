@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-16T14:11:22" hostname="Komputer" time="0.018">
+<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-03-21T10:05:23" hostname="MacBook-Pro-Karol-2.local" time="0.015">
   <properties/>
-  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.018"/>
+  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.015"/>
   <system-out><![CDATA[Test: begin
 Displaying numbers map:
-5
 9
-7
-5
 3
-7
-7
-3
-5
+4
+0
 2
-Average equals: 5.3
+1
+0
+7
+5
+4
+Average equals: 3.5
 Test: end
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

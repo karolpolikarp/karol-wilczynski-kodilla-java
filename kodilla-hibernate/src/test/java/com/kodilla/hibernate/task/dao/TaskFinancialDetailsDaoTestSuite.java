@@ -7,9 +7,12 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 
+@Transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TaskFinancialDetailsDaoTestSuite {
@@ -28,7 +31,7 @@ public class TaskFinancialDetailsDaoTestSuite {
         List<TaskFinancialDetails> resultList = taskFinancialDetailsDao.findByPaid(false);
 
         //Then
-        Assert.assertEquals(1, resultList.size());
+        Assert.assertEquals(26, resultList.size());
 
         //CleanUp
         taskFinancialDetailsDao.delete(id);

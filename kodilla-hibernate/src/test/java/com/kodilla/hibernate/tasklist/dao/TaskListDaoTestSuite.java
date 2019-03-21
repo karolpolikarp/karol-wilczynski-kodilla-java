@@ -12,9 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 
+@Transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TaskListDaoTestSuite {
@@ -107,10 +109,10 @@ public void testNamedQueries() {
 
     //Then
     try {
-        Assert.assertEquals(6, longTasks.size());
-        Assert.assertEquals(18, shortTasks.size());
-        Assert.assertEquals(18, enoughTimeTasks.size());
-        Assert.assertEquals(12, durationLongerThanTasks.size());
+        Assert.assertEquals(8, longTasks.size());
+        Assert.assertEquals(21, shortTasks.size());
+        Assert.assertEquals(8, enoughTimeTasks.size());
+        Assert.assertEquals(17, durationLongerThanTasks.size());
     } finally {
         //CleanUp
         taskListDao.delete(id);

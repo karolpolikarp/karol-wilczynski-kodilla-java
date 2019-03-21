@@ -1,16 +1,18 @@
-Test: begin
-Displaying numbers map:
-5
-9
-7
-5
-3
-7
-7
-3
-5
-2
-Average equals: 5.3
-Test: end
-Test: begin
-Test: end
+Test: begin
+Displaying numbers map:
+9
+3
+4
+0
+2
+1
+0
+7
+5
+4
+Average equals: 3.5
+
+Test: end
+Test: begin
+
+Test: end
