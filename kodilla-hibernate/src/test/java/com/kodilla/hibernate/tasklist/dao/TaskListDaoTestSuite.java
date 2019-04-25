@@ -111,7 +111,7 @@ public void testNamedQueries() {
     try {
         Assert.assertEquals(8, longTasks.size());
         Assert.assertEquals(21, shortTasks.size());
-        Assert.assertEquals(8, enoughTimeTasks.size());
+        Assert.assertEquals(3, enoughTimeTasks.size());
         Assert.assertEquals(17, durationLongerThanTasks.size());
     } finally {
         //CleanUp
